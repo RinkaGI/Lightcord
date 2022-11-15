@@ -13,5 +13,16 @@ module.exports = class Bot extends EventEmitter {
 
     run() {
         this.ws.connect()
+
+        this.ws.ws.on('message', (data) => {
+            switch(this.ws.event) {
+                // case 'READY':
+                //     this.emit('READY')
+                // case 'GUILD_CREATE':
+                //     this.emit('GUILD_CREATE')
+                default:
+                    this.emit(this.ws.event)
+            }
+        })
     }
 }

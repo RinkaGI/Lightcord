@@ -1,3 +1,4 @@
-const WebSocketsManager = require('./network/websocketManager');
 const Client = require('./client/Client');
-module.exports = Client;
+const Intents = require('./constants/intents');
+exports.Bot = Client;
+exports.Intents = Intents

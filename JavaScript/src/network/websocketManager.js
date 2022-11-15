@@ -60,6 +60,8 @@ module.exports = class WebSocketManager {
                         break;
                 }
 
+                this.event = event
+
                 switch (event) {
                     case 'READY':
                         console.log('-- BOT READY --'.bgCyan)
