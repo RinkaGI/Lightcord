@@ -1,9 +1,9 @@
 const Lightcord = require('./src/lightcord');
 
-const bot = new Lightcord.Bot('MTAwNjE4NTcyNTQyMDY1NDU5Mg.GEkX77.cyUdL38URtcWdti43jSfA-IQVAJwzQjTdzYR4M', Lightcord.Intents.Minimum)
+const bot = new Lightcord.Bot('TOKEN', Lightcord.Intents.Everything)
 
-bot.on(Lightcord.Events.Ready, () => {
-    console.log('Ready with event emitter.')
+bot.on(Lightcord.Events.MessageCreate, (message) => {
+    console.log(message)
 })
 
 bot.run()

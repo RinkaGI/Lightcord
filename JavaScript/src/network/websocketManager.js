@@ -65,8 +65,8 @@ module.exports = class WebSocketManager {
                 switch (event) {
                     case 'READY':
                         console.log('-- BOT READY --'.bgCyan)
-                    case 'GUILD_CREATE':
-                        console.log('')
+                    default:
+                        return
                 }
             })
         } catch (err) {
